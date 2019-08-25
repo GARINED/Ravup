@@ -1,0 +1,10 @@
+App\Entity\Media:
+  attributes:
+    id:
+      groups: ['media:read', 'user:read', 'event:read']
+    title:
+      groups: ['media:read', 'media:write', 'event:read']
+    mimetype:
+      groups: ['media:read', 'media:write', 'event:read']
+    fileId:
+      groups: ['media:read', 'user:read', 'event:read']

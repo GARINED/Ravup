@@ -1,0 +1,40 @@
+App\Entity\Event:
+  attributes:
+    id:
+      groups: ['event:read', 'user:read']
+    name:
+      groups: ['event:read', 'event:write', 'user:read']
+    shortDescription:
+      groups: ['event:read', 'event:write', 'user:read']
+    longDescription:
+      groups: ['event:read', 'event:write']
+    type:
+      groups: ['event:read', 'event:write', 'user:read']
+    location:
+      groups: ['event:read', 'event:write', 'user:read']
+    creator:
+      groups: ['event:read', 'event:write']
+    picture:
+      groups: ['event:read', 'event:write', 'user:read']
+    status:
+      groups: ['event:read', 'event:write', 'user:read']
+    ageMin:
+      groups: ['event:read', 'event:write', 'user:read']
+    price:
+      groups: ['event:read', 'event:write', 'user:read']
+    autoAccept:
+      groups: ['event:read', 'event:write', 'user:read']
+    authorizationDate:
+      groups: ['event:read', 'event:write', 'user:read']
+    userParticipations:
+      groups: ['event:read', 'event:write']
+    dateList:
+      groups: ['event:read', 'event:write', 'user:read']
+    messages:
+      groups: ['event:read', 'event:write']
+    sondages:
+      groups: ['event:read', 'event:write']
+    coverPicture:
+      groups: ['event:read', 'event:write', 'user:read']
+    maxParticipate:
+      groups: ['event:read', 'event:write', 'user:read']

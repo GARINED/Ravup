@@ -1,0 +1,16 @@
+App\Entity\Notification:
+  attributes:
+    id:
+      groups: ['notification:read', 'notification:write', 'user:read']
+    creator:
+      groups: ['notification:read', 'notification:write']
+    recipient:
+      groups: ['notification:read', 'notification:write']
+    enabled:
+      groups: ['notification:read', 'notification:write', 'user:read']
+    message:
+      groups: ['notification:read', 'notification:write', 'user:read']
+    type:
+      groups: ['notification:read', 'notification:write', 'user:read']
+    info:
+      groups: ['notification:read', 'notification:write', 'user:read']

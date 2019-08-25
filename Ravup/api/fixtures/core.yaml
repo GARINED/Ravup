@@ -1,0 +1,96 @@
+App\Entity\Structure:
+  youschool:
+    name: 'Ravup'
+    domain: 'dev.ravup.fr'
+    adminDomain: 'dev.api.ravup.fr'
+    logo: 'not_set'
+  cci:
+    name: 'CCI'
+    domain: 'cci.dev.ravup.fr'
+    adminDomain: 'cci.dev.api.ravup.fr'
+    logo: 'not_set'
+
+App\Entity\User:
+  user_admin:
+    username: 'admin'
+    usernameCanonical: 'admin'
+    enabled: true
+    email: 'admin@ravup.fr'
+    emailCanonical: 'admin@ravup.fr'
+    plainPassword: 'admin'
+    roles: [ROLE_ADMIN]
+    structure: '@youschool'
+    fullname: 'admin Ravup'
+    age: 20
+    score: 2300
+    sexe: 'Homme'
+    city: 'Paris'
+    country: 'France'
+    biography: 'je suis le boss de Ravup'
+
+  user_ravup:
+    username: 'ravup'
+    usernameCanonical: 'ravup'
+    enabled: true
+    email: 'ravup@ravup.fr'
+    emailCanonical: 'ravup@ravup.fr'
+    plainPassword: 'ravup'
+    roles: [ROLE_RAVUP]
+    structure: '@youschool'
+
+App\Entity\Event:
+  event_1:
+    name: 'Pool party'
+    shortDescription: 'Préparez vous pour la soirée la plus chaude de toute votre vie'
+    longDescription: 'Préparez vous pour la soirée la plus chaude de toute votre vie'
+    type: 'Party'
+    location: 'Bordeaux'
+    creator: '@user_admin'
+    status: 'Private'
+    autoAccept: true
+    authorizationDate: true
+    price: 0
+    ageMin: 0
+    maxParticipate: 0
+
+  event_2:
+    name: 'Dylan Birthday'
+    shortDescription: 'Ayo les frate'
+    longDescription: 'Préparez vous pour la soirée la plus chaude de toute votre vie'
+    type: 'Birthday'
+    location: 'Eysines'
+    creator: '@user_ravup'
+    status: 'Private'
+    price: 12
+    autoAccept: true
+    authorizationDate: true
+    ageMin: 0
+    maxParticipate: 0
+
+  event_{3..6}:
+    name: 'Big Birthday'
+    shortDescription: 'Ça va être le feu hahaha (rire graveleu)'
+    longDescription: 'Préparez vous pour la soirée la plus chaude de toute votre vie'
+    type: 'Party'
+    location: 'Bordeaux'
+    creator: '@user_ravup'
+    status: 'Public'
+    autoAccept: true
+    authorizationDate: true
+    price: 0
+    ageMin: 0
+    maxParticipate: 0
+
+  event_{7..10}:
+    name: 'Party of the year'
+    shortDescription: 'Come with all your friends !'
+    longDescription: 'Préparez vous pour la soirée la plus chaude de toute votre vie'
+    type: 'Birthday'
+    location: 'Los Angeles'
+    creator: '@user_admin'
+    status: 'Public'
+    autoAccept: true
+    price: 20
+    authorizationDate: true
+    ageMin: 0
+    maxParticipate: 0

@@ -1,0 +1,11 @@
+App\Entity\Participation:
+  attributes:
+    id:
+      groups: ['participation:read', 'participation:write', 'user:read', 'event:read']
+    relatedUser:
+      groups: ['participation:read', 'participation:write', 'event:read']
+    participate:
+      groups: ['participation:read', 'participation:write', 'user:read', 'event:read']
+    event:
+      groups: ['participation:read', 'participation:write', 'user:read']
+

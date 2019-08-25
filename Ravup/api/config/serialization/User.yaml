@@ -1,0 +1,44 @@
+App\Entity\User:
+  attributes:
+    id:
+      groups: ['user:read', 'media:read', 'event:read']
+    email:
+      groups: ['user:read', 'user:write', 'media:read']
+    username:
+      groups: ['user:read', 'user:write', 'media:read', 'event:read']
+    fullname:
+      groups: ['user:read', 'user:write', 'media:read']
+    age:
+      groups: ['user:read', 'user:write']
+    score:
+      groups: ['user:read', 'user:write']
+    sexe:
+      groups: ['user:read', 'user:write']
+    city:
+      groups: ['user:read', 'user:write']
+    country:
+      groups: ['user:read', 'user:write']
+    biography:
+      groups: ['user:read', 'user:write']
+    roles:
+      groups: ['user:read']
+    structure:
+      groups: ['user:read', 'user:write']
+    media:
+      groups: ['user:read', 'user:write']
+    createdEvents:
+      groups: ['user:read', 'user:write']
+    groupJoin:
+      groups: ['user:read', 'user:write']
+    createdGroup:
+      groups: ['user:read', 'user:write']
+    messages:
+      groups: ['user:read', 'user:write']
+    eventParticipations:
+      groups: ['user:read', 'user:write']
+    validations:
+      groups: ['user:read', 'user:write']
+    profilPicture:
+      groups: ['user:read', 'user:write', 'media:read', 'event:read']
+    notifications:
+      groups: ['user:read', 'user:write']

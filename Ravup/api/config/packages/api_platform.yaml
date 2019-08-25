@@ -1,0 +1,16 @@
+api_platform:
+    enable_fos_user: true
+
+    mapping:
+        paths: ['%kernel.project_dir%/src/Entity']
+
+    swagger:
+         api_keys:
+             apiKey:
+                name: Authorization
+                type: header
+
+framework:
+  serializer:
+    mapping:
+      paths: ['%kernel.project_dir%/config/serialization']

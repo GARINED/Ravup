@@ -1,0 +1,10 @@
+App\Entity\Date:
+  attributes:
+    id:
+      groups: ['date:read', 'date:read', 'event:read']
+    date:
+      groups: ['date:read', 'date:read', 'event:read']
+    duration:
+      groups: ['date:read', 'date:read', 'event:read']
+    event:
+      groups: ['date:read', 'date:read']

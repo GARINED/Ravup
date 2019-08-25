@@ -1,0 +1,43 @@
+version: "3"
+
+services:
+  # Front server
+  nginx:
+    build: ./docker/nginx
+    ports:
+      - "80:80"
+    volumes:
+      - ./api:/var/www/api
+    links:
+      - php
+    networks:
+      default:
+        aliases:
+          - dev.api.ravup.fr
+
+  # PHP-FPM
+  php:
+    build: ./docker/php
+    volumes:
+      - ./api:/var/www/:z
+      - ravup_api_var:/var/www/var:z
+    environment:
+      - XDEBUG_CONFIG=remote_host=127.0.0.1
+      - PHP_IDE_CONFIG=serverName=ravup # for console debugging
+
+  # Postgres
+  pgsql:
+    build: ./docker/postgres
+    ports:
+      - "5433:5432"
+    volumes:
+      - database:/var/lib/postgresql/data/pgdata:z
+    environment:
+      - POSTGRES_USER
+      - POSTGRES_PASSWORD
+      - POSTGRES_DB
+      - PGDATA
+
+volumes:
+  database:
+  ravup_api_var:
